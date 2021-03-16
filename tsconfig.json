@@ -1,12 +1,53 @@
+// @see https://www.typescriptlang.org/tsconfig#jsx
+
 {
+  // 项目的编译器选项集
   "compilerOptions": {
+    // 当编译源文件出现错误的时候，是否继续输出编译结果(为true, 则当编译的源文件中有错误, 不再输出编译结果)
+    "noEmitOnError": true,
+    // 控制当源文件中存在隐式的any的时候是否报错(为true, 则当源文件中存在隐式的any的时候会报错)
+    "noImplicitAny": true,
+    // 控制当源文件中存在this的值是any的时候是否报错(为true, 则当源文件中存在this为any的情况会报错)
+    "noImplicitThis": true,
+    // 控制编译后输出的是什么js版本(默认值为es3)
     "target": "es2015",
+    // 指定要引入的库文件, es5、es6、es7、dom 四值可选(默认dom)
+    "lib": ["es7", "dom"],
+    // 配置模块的解析规则, classic / node(最常用, 建议) @see https://www.typescriptlang.org/docs/handbook/module-resolution.html
     "moduleResolution": "node",
-    "strict": true,
+    // 指定要使用的模块标准
+    "module": "esnext",
+    // 指定编译输出文件中是否删除源文件中的注释(默认为 false)
+    "removeComments": true,
+    // 控制是否始终以严格模式检查每个模块, 并且在编译后的输出结果中加入"use strict"(默认为false)
+    "alwaysStrict": false,
+    // 允许导入扩展名为“ .json”的模块
     "resolveJsonModule": true,
+    // ES模块互操作
     "esModuleInterop": true,
-    "skipLibCheck": false,
-    "noEmit": true,
-    "jsx": "react"
-  }
+    // 跳过库检查
+    "skipLibCheck": true,
+    // 用于指定是否在编译完成后生成相应的*.d.ts文件(默认为false)
+    "declaration": true,
+    // 控制如何在JavaScript文件中发出JSX构造
+    "jsx": "react",
+    // 指定编译结果的输出目录
+    "outDir": "./lib/",
+    // 拓宽引入非相对模块时的查找路径, (默认为 ./)
+    "baseUrl": "./",
+    // 配合baseUrl一起使用, 相对于baseUrl所在的路径, 主要用于到baseUrl所在目录下查找的时候进行的路径映射
+    "paths": {},
+    // 指定类型声明文件的查找路径(默认node_modules/@types), 只能识别目录下的.d.ts文件
+    "typeRoots": ["node_modules/@types"],
+    // 允许在 TypeScript 项目中使用 JavaScript
+    "allowJs": false
+  },
+  // 需要编译的文件，不可以使用通配符
+  "files": [],
+  // 需要编译的文件，可以使用通配符
+  "include": ["src/**/*"],
+  // 通过exclude配置来排除掉include配置中包含的源文件
+  "exclude": ["node_modules"],
+  // 继承另外一个配置文件, 可以直接继承社区最佳实践 @see https://www.npmjs.com/package/@tsconfig/node12
+  "extends": "@tsconfig/node12/tsconfig.json"
 }
