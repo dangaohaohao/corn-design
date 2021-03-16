@@ -1,0 +1,25 @@
+{
+  //保存时格式化文件。
+  "editor.formatOnSave": true,
+  //定义一个优先于所有其他格式化程序设置的默认格式化程序。必须是提供格式化程序的扩展的标识符。这里使用的是 prettier
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // 保存时要运行的代码操作类型。这里是修复 eslint 问题
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  // 用 eslint 检测的文件
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "workbench.colorCustomizations": {
+    // 设置编辑器背景色
+    "editor.background": "#272929",
+    // 设置编辑器选中颜色
+    "editor.selectionBackground": "#497fd4",
+    // 设置编辑器前景色
+    "editor.foreground": "#497fd4"
+  }
+}

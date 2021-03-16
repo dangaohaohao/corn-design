@@ -1,0 +1,17 @@
+# http://editorconfig.org
+# 另外，如果项目配置了.editorConfig文件，在配置了"editor.formatOnSave": true后，如果项目成员没有安装 Prettier 插件，保存时就会读取.editorConfig文件，同样可以格式化代码。启用 Prettier 插件后，.editorConfig的配置就会失效，读取.prettierrc 文件的配置
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+[Makefile]
+indent_style = tab
