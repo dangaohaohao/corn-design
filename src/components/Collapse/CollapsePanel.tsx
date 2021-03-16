@@ -12,7 +12,7 @@ const CollapsePanel: React.FC<PropsWithChildren<CollapsePanelProps>> = (
 
   const { activeIds, onActive } = useContext(CollapseContext);
 
-  const active = activeIds.includes(id);
+  const active = activeIds?.includes(id);
 
   const handleClick = (event: React.MouseEvent) => {
     const context = { event };
