@@ -19,7 +19,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,ts,tsx,css,less}": [
+    "*.{js,ts,tsx,css,less}": [
       "npx prettier --write --check",
       "npx eslint --fix --max-warnings 0"
     ]
