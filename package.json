@@ -28,11 +28,13 @@
     "@emotion/react": "^11.1.1",
     "@emotion/styled": "^11.0.0",
     "classnames": "^2.2.6",
-    "docz": "latest",
+    "docz": "^2.3.2-alpha.0",
+    "gatsby": "^3.1.0",
     "gatsby-plugin-less": "^5.0.0",
+    "gatsby-theme-docz": "^2.3.1-alpha.0",
     "hoist-non-react-statics": "^3.3.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.11",
@@ -43,6 +45,7 @@
     "@typescript-eslint/parser": "^4.17.0",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.22.0",
     "husky": "=4",
     "lint-staged": ">=10",

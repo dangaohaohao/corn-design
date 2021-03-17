@@ -43,11 +43,11 @@
     "allowJs": false
   },
   // 需要编译的文件，不可以使用通配符
-  "files": [],
+  // "files": [],
   // 需要编译的文件，可以使用通配符
   "include": ["src/**/*"],
   // 通过exclude配置来排除掉include配置中包含的源文件
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules"]
   // 继承另外一个配置文件, 可以直接继承社区最佳实践 @see https://www.npmjs.com/package/@tsconfig/node12
-  "extends": "@tsconfig/node12/tsconfig.json"
+  // "extends": "@tsconfig/node12/tsconfig.json"
 }
